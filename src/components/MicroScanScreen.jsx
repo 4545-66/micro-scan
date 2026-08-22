@@ -511,7 +511,7 @@ function CameraScreen({
         }}
       >
         {cameraStatus === "active" ? (
-        <div style={{position:"absolute", top:4, left:4, zIndex:99, background:"red", color:"white", padding:4, fontSize:12}}>DEBUG: {cameraStatus}</div>
+        <div style={{position:"fixed", top:60, left:4, zIndex:9999, background:"red", color:"white", padding:6, fontSize:14}}>DEBUG: {cameraStatus}</div>", padding:4, fontSize:12}}>DEBUG: {cameraStatus}</div>
           <video
             ref={videoRef}
             playsInline
@@ -529,7 +529,7 @@ function CameraScreen({
             }}
           />
         ) : (
-          <> <div style={{position:"absolute", top:4, left:4, zIndex:99, background:"blue", color:"white", padding:4, fontSize:12}}>DEBUG2: {cameraStatus}</div>
+          <> <div style={{position:"fixed", top:60, left:4, zIndex:9999, background:"blue", color:"white", padding:6, fontSize:14}}>DEBUG2: {cameraStatus}</div>
             <video ref={videoRef} playsInline muted style={{ display: "none" }} />
             <SpecimenTexture zoom={zoom} torchOn={torchOn} />
             {(cameraStatus === "denied" || cameraStatus === "unsupported") && (

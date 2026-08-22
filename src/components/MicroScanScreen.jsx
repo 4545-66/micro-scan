@@ -421,9 +421,8 @@ function useCameraStream(videoRef, torchOn) {
     }
   }, [torchOn]);
 
-  return status;
-}
-
+  useEffect(() => { if (status !== "idle") alert("STATUS: " + status); }, [status]);
+      return status;
 // ── Écran caméra avec cadrage manuel ───────────────────────────
 function CameraScreen({
   torchOn,

@@ -1,11 +1,12 @@
 # Micro Scan
 
 Appli caméra pour cadrage manuel + analyse macro d'échantillons (avec clip
-microscope smartphone 100x–300x). Analyse indicative, pas un diagnostic.
+ microscope smartphone 100x–300x). Analyse indicative, pas un diagnostic.
+## Auteur
 
+Créé par HOUNGA Mathieu Lionel
 ## Structure
 
-```
 micro-scan/
 ├── index.html
 ├── package.json
@@ -27,7 +28,7 @@ micro-scan/
 
 - Crée un nouveau dépôt sur GitHub, nom suggéré : `micro-scan`
 - Ajoute tous les fichiers de ce dossier dans le dépôt (via l'app GitHub
-  ou l'interface web GitHub — upload de fichiers si pas de terminal git)
+  ou l'interface web GitHub — upload de fichiers dsi pas de terminal git)
 
 ### 2. Connecter à Netlify
 

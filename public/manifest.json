@@ -1,5 +1,5 @@
 {
-  "name": "Micro-Scan",
+  "name": "Micro-Scan", "author": "HOUNGA Mathieu Lionel",
   "short_name": "MicroScan",
   "description": "Analyse de fraîcheur alimentaire par smartphone",
   "start_url": "/",

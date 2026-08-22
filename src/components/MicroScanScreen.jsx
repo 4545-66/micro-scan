@@ -529,7 +529,7 @@ function CameraScreen({
             }}
           />
         ) : (
-          <>
+          <> <div style={{position:"absolute", top:4, left:4, zIndex:99, background:"blue", color:"white", padding:4, fontSize:12}}>DEBUG2: {cameraStatus}</div>
             <video ref={videoRef} playsInline muted style={{ display: "none" }} />
             <SpecimenTexture zoom={zoom} torchOn={torchOn} />
             {(cameraStatus === "denied" || cameraStatus === "unsupported") && (

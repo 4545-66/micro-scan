@@ -1,5 +1,5 @@
 {
-  "name": "micro-scan",
+  "name": "micro-scan","author": "HOUNGA Mathieu Lionel",
   "private": true,
   "version": "0.1.0",
   "type": "module",

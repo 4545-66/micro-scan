@@ -38,7 +38,13 @@ const STAGES = {
 };
 
 // ── Racine ──────────────────────────────────────────────────────
-export default function MicroScanScreen() {
+export default function MicroScanScreen() { const [debugErr, setDebugErr] = useState(null);
+useEffect(() => {
+  const handler = (e) => setDebugErr(String(e?.error?.message || e?.message || e));
+  window.addEventListener("error", handler);
+  window.addEventListener("unhandledrejection", (e) => setDebugErr(String(e?.reason?.message || e?.reason)));
+  return () => window.removeEventListener("error", handler);
+}, []);
   const [stage, setStage] = useState(STAGES.ONBOARDING);
   const [torchOn, setTorchOn] = useState(false);
   const [zoom, setZoom] = useState(180);
@@ -104,7 +110,7 @@ export default function MicroScanScreen() {
         position: "relative",
         border: `1px solid ${T.surfaceLine}`,
       }}
-    >
+    > {debugErr && <div style={{position:"fixed", top:100, left:4, zIndex:99999, background:"orange", color:"black", padding:8, fontSize:13, maxWidth:"90%"}}>JS ERROR: {debugErr}</div>}
       {stage === STAGES.ONBOARDING && (
         <Onboarding onDone={finishOnboarding} />
       )}

@@ -511,6 +511,7 @@ function CameraScreen({
         }}
       >
         {cameraStatus === "active" ? (
+        <div style={{position:"absolute", top:4, left:4, zIndex:99, background:"red", color:"white", padding:4, fontSize:12}}>DEBUG: {cameraStatus}</div>
           <video
             ref={videoRef}
             playsInline
